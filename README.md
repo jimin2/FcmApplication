@@ -25,13 +25,13 @@ implementation 'com.google.firebase:firebase-messaging:18.0.0'
 앱을 처음 시작할 때 FCM SDK에서 클라이언트 앱 인스턴스용 등록 토큰을 생성한다. 
 단일 기기를 타겟팅하거나 기기 그룹을 만들려면 FirebaseMessagingService를 확장하고 onNewToken을 재정의하여 이 토큰에 액세스해야 한다.
 
-# 등록 토큰이 변경되는 경우
+### 등록 토큰이 변경되는 경우
 - 앱에서 인스턴스 ID 삭제
 - 새 기기에서 앱 복원
 - 사용자가 앱 삭제/재설치
 - 사용자가 앱 데이터 제거
 
-현재 등록 토큰 검색시에 아래와 같이 호출하면 된다.
+### 현재 등록 토큰 검색시에 아래와 같이 호출하면 된다.
 ```kotlin
 FirebaseInstanceId.getInstance().getInstanceId()
 ```
